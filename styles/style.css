@@ -7,11 +7,13 @@ html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  /* scroll-behavior: smooth; */
 }
 
 :root {
-  --bio: url("https://assets.website-files.com/5f36e4734102a768f6308506/5f4fda86b0c9b452846dc16d_joe-bloggs-headshot.jpg"); /* search for bio */
-  --profile: url("../media/profile.jpg");
+  --bio: url("https://assets.website-files.com/5f36e4734102a768f6308506/5f4fda86b0c9b452846dc16d_joe-bloggs-headshot.jpg");
+  /* search for bio */
+  --profile: url("../image/profile.jpg");
   --bg-color: #fff;
   --accent-color: #000;
   --dark-bg-color: #fff;
@@ -19,6 +21,15 @@ html {
   --hover-color: #5d00ff;
   --grad-pic-color: #5d00ff22;
 }
+
+/* Dark mode styles */
+:root.dark-mode {
+  --bg-color: #111; /* Dark background color */
+  --accent-color: #fff; /* Light text color */
+  --dark-bg-color: #111; /* Dark background color for specific elements */
+  /* Add more dark mode styles here */
+}
+
 
 body {
   margin: 0
@@ -2622,9 +2633,43 @@ h2.centered::after {
   transition: max-height 0.3s ease-out;
   padding: 0 10px;
   border-top: 1px solid #ddd;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(120, 120, 120, 0.2);
   border-radius: 1rem;
 }
+
+
+.top-nav-group {
+  position: relative;
+  transition: top 0.3s ease;
+  display: none;
+  /* Add a smooth transition */
+}
+
+.top-nav-group.sticky {
+  display: block;
+  position: fixed;
+  top: 0;
+  animation: slideDown 0.3s ease;
+  /* Add a slide-down animation */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Adjust the z-index as needed */
+  background-color: var(--bg-color); /* Set the background color of the sticky navbar */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a box shadow for a subtle effect */
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+
 
 .collapsible:hover {
   color: var(--hover-color);
@@ -2650,13 +2695,25 @@ h2.centered::after {
 }
 
 @keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+  from {
+    width: 0
+  }
+
+  to {
+    width: 100%
+  }
 }
 
 @keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: #000 }
+
+  from,
+  to {
+    border-color: transparent
+  }
+
+  50% {
+    border-color: #000
+  }
 }
 
 .column {
@@ -2887,8 +2944,8 @@ h2.centered::after {
 
 .column.bio-image {
   min-height: 720px;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(var(--grad-pic-color)), to(var(--grad-pic-color))), url("../media/image.jpg");
-  background-image: linear-gradient(180deg, var(--grad-pic-color), var(--grad-pic-color)), url("../media/image.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(var(--grad-pic-color)), to(var(--grad-pic-color))), url("../image/image.jpg");
+  background-image: linear-gradient(180deg, var(--grad-pic-color), var(--grad-pic-color)), url("../image/image.jpg");
   background-position: 0px 0px, 50% 0%;
   background-size: auto, cover;
   background-repeat: repeat, no-repeat;
@@ -3587,8 +3644,8 @@ h2.centered::after {
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
     border-top: 2px solid var(--accent-color);
-    background-image: -webkit-gradient(linear, left top, left bottom, from(null), to(null)), url("../media/image.jpg");
-    background-image: linear-gradient(180deg, null, null), url("../media/image.jpg");
+    background-image: -webkit-gradient(linear, left top, left bottom, from(null), to(null)), url("../image/image.jpg");
+    background-image: linear-gradient(180deg, null, null), url("../image/image.jpg");
     background-position: 0px 0px, 50% 0%;
   }
 
@@ -6483,9 +6540,42 @@ h2.centered::after {
   transition: max-height 0.3s ease-out;
   padding: 0 10px;
   border-top: 1px solid #ddd;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(120, 120, 120, 0.2);
   border-radius: 1rem;
 }
+
+
+.top-nav-group {
+  position: relative;
+  transition: top 0.3s ease;
+  display: none;
+  /* Add a smooth transition */
+}
+
+.top-nav-group.sticky {
+  display: block;
+  position: fixed;
+  top: 0;
+  animation: slideDown 0.3s ease;
+  /* Add a slide-down animation */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Adjust the z-index as needed */
+  background-color: var(--bg-color); /* Set the background color of the sticky navbar */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a box shadow for a subtle effect */
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
 
 .collapsible:hover {
   color: var(--hover-color);
@@ -6496,7 +6586,7 @@ h2.centered::after {
   color: var(--hover-color);
 }
 
-.collapsible.active+.content {
+.collapsible.active+../media/image.jpg {
   max-height: 500px;
   /* Adjust this value based on your content */
 }
@@ -6511,13 +6601,25 @@ h2.centered::after {
 }
 
 @keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+  from {
+    width: 0
+  }
+
+  to {
+    width: 100%
+  }
 }
 
 @keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: #000 }
+
+  from,
+  to {
+    border-color: transparent
+  }
+
+  50% {
+    border-color: #000
+  }
 }
 
 .column {
@@ -6748,8 +6850,8 @@ h2.centered::after {
 
 .column.bio-image {
   min-height: 720px;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(var(--grad-pic-color)), to(var(--grad-pic-color))), url("../media/image.jpg");
-  background-image: linear-gradient(180deg, var(--grad-pic-color), var(--grad-pic-color)), url("../media/image.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(var(--grad-pic-color)), to(var(--grad-pic-color))), url("../image/image.jpg");
+  background-image: linear-gradient(180deg, var(--grad-pic-color), var(--grad-pic-color)), url("../image/image.jpg");
   background-position: 0px 0px, 50% 0%;
   background-size: auto, cover;
   background-repeat: repeat, no-repeat;
@@ -7448,8 +7550,8 @@ h2.centered::after {
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
     border-top: 2px solid var(--accent-color);
-    background-image: -webkit-gradient(linear, left top, left bottom, from(null), to(null)), url("../media/image.jpg");
-    background-image: linear-gradient(180deg, null, null), url("../media/image.jpg");
+    background-image: -webkit-gradient(linear, left top, left bottom, from(null), to(null)), url("../image/image.jpg");
+    background-image: linear-gradient(180deg, null, null), url("../image/image.jpg");
     background-position: 0px 0px, 50% 0%;
   }
 

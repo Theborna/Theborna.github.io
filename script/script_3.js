@@ -54,3 +54,24 @@ function erase() {
 }
 
 type();
+
+window.addEventListener('scroll', function () {
+    const navbar = document.querySelector('.top-nav-group');
+    const scrollY = window.scrollY;
+    const threshold = navbar.offsetHeight; // Use the height of the navbar as the threshold
+
+    if (scrollY > threshold) {
+        navbar.classList.add('sticky');
+    } else {
+        navbar.classList.remove('sticky');
+    }
+});
+
+const darkModeToggle = document.getElementById('dark-mode-toggle');
+const root = document.documentElement;
+
+// Add a click event listener to the button
+darkModeToggle.addEventListener('click', function() {
+    // Toggle the 'dark-mode' class on the root element
+    root.classList.toggle('dark-mode');
+});
