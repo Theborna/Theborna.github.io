@@ -53,8 +53,6 @@ function erase() {
     }
 }
 
-type();
-
 window.addEventListener('scroll', function () {
     const navbar = document.querySelector('.top-nav-group');
     const scrollY = window.scrollY;
@@ -75,3 +73,5 @@ darkModeToggle.addEventListener('click', function() {
     // Toggle the 'dark-mode' class on the root element
     root.classList.toggle('dark-mode');
 });
+
+type();
