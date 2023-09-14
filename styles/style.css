@@ -2628,6 +2628,7 @@ h2.centered::after {
 
 .collapsible.active {
   background-color: transparent;
+  color: var(--hover-color);
 }
 
 .collapsible.active+.content {
@@ -6468,6 +6469,7 @@ h2.centered::after {
 
 .collapsible.active {
   background-color: transparent;
+  color: var(--hover-color`);
 }
 
 .collapsible.active+.content {
