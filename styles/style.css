@@ -7,13 +7,17 @@ html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  --bio: url("https://assets.website-files.com/5f36e4734102a768f6308506/5f4fda86b0c9b452846dc16d_joe-bloggs-headshot.jpg");
-  --profile: url("../media/image.jpg");
+}
+
+:root {
+  --bio: url("https://assets.website-files.com/5f36e4734102a768f6308506/5f4fda86b0c9b452846dc16d_joe-bloggs-headshot.jpg"); /* search for bio */
+  --profile: url("../media/profile.jpg");
   --bg-color: #fff;
   --accent-color: #000;
   --dark-bg-color: #fff;
   --highlight-button-color: #555;
-  --hover-color: #005eff;
+  --hover-color: #5d00ff;
+  --grad-pic-color: #5d00ff22;
 }
 
 body {
@@ -2623,7 +2627,7 @@ h2.centered::after {
 }
 
 .collapsible:hover {
-  color: var(--hover-color); 
+  color: var(--hover-color);
 }
 
 .collapsible.active {
@@ -2634,6 +2638,25 @@ h2.centered::after {
 .collapsible.active+.content {
   max-height: 500px;
   /* Adjust this value based on your content */
+}
+
+.typed-text {
+  display: inline;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 4px solid #000;
+  animation: typing 3s steps(15, end), blink-caret 0.5s step-end infinite;
+  color: var(--hover-color);
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #000 }
 }
 
 .column {
@@ -2756,6 +2779,7 @@ h2.centered::after {
 }
 
 .column.hero-heading {
+  min-width: 70%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2863,8 +2887,8 @@ h2.centered::after {
 
 .column.bio-image {
   min-height: 720px;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 89, 99, 0.6)), to(rgba(0, 89, 99, 0.6))), var(--bio);
-  background-image: linear-gradient(180deg, rgba(0, 89, 99, 0.6), rgba(0, 89, 99, 0.6)), var(--bio);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(var(--grad-pic-color)), to(var(--grad-pic-color))), url("../media/image.jpg");
+  background-image: linear-gradient(180deg, var(--grad-pic-color), var(--grad-pic-color)), url("../media/image.jpg");
   background-position: 0px 0px, 50% 0%;
   background-size: auto, cover;
   background-repeat: repeat, no-repeat;
@@ -3563,8 +3587,8 @@ h2.centered::after {
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
     border-top: 2px solid var(--accent-color);
-    background-image: -webkit-gradient(linear, left top, left bottom, from(null), to(null)), var(--bio);
-    background-image: linear-gradient(180deg, null, null), var(--bio);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(null), to(null)), url("../media/image.jpg");
+    background-image: linear-gradient(180deg, null, null), url("../media/image.jpg");
     background-position: 0px 0px, 50% 0%;
   }
 
@@ -6464,17 +6488,36 @@ h2.centered::after {
 }
 
 .collapsible:hover {
-  color: var(--hover-color); 
+  color: var(--hover-color);
 }
 
 .collapsible.active {
   background-color: transparent;
-  color: var(--hover-color`);
+  color: var(--hover-color);
 }
 
 .collapsible.active+.content {
   max-height: 500px;
   /* Adjust this value based on your content */
+}
+
+.typed-text {
+  display: inline;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 4px solid #000;
+  animation: typing 3s steps(15, end), blink-caret 0.5s step-end infinite;
+  color: var(--hover-color);
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #000 }
 }
 
 .column {
@@ -6597,6 +6640,7 @@ h2.centered::after {
 }
 
 .column.hero-heading {
+  min-width: 70%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -6704,8 +6748,8 @@ h2.centered::after {
 
 .column.bio-image {
   min-height: 720px;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 89, 99, 0.6)), to(rgba(0, 89, 99, 0.6))), url("https://assets.website-files.com/5f36e4734102a768f6308506/5f4fda86b0c9b452846dc16d_joe-bloggs-headshot.jpg");
-  background-image: linear-gradient(180deg, rgba(0, 89, 99, 0.6), rgba(0, 89, 99, 0.6)), url("https://assets.website-files.com/5f36e4734102a768f6308506/5f4fda86b0c9b452846dc16d_joe-bloggs-headshot.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(var(--grad-pic-color)), to(var(--grad-pic-color))), url("../media/image.jpg");
+  background-image: linear-gradient(180deg, var(--grad-pic-color), var(--grad-pic-color)), url("../media/image.jpg");
   background-position: 0px 0px, 50% 0%;
   background-size: auto, cover;
   background-repeat: repeat, no-repeat;
@@ -7404,8 +7448,8 @@ h2.centered::after {
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
     border-top: 2px solid var(--accent-color);
-    background-image: -webkit-gradient(linear, left top, left bottom, from(null), to(null)), var(--bio);
-    background-image: linear-gradient(180deg, null, null), ;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(null), to(null)), url("../media/image.jpg");
+    background-image: linear-gradient(180deg, null, null), url("../media/image.jpg");
     background-position: 0px 0px, 50% 0%;
   }
 
