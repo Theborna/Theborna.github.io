@@ -14,20 +14,38 @@ html {
   --bio: url("https://assets.website-files.com/5f36e4734102a768f6308506/5f4fda86b0c9b452846dc16d_joe-bloggs-headshot.jpg");
   /* search for bio */
   --profile: url("../image/profile.jpg");
-  --bg-color: #fff;
-  --accent-color: #000;
-  --dark-bg-color: #fff;
-  --highlight-button-color: #555;
-  --hover-color: #5d00ff;
-  --grad-pic-color: #5d00ff22;
 }
 
-/* Dark mode styles */
+/* Light mode colors */
+:root {
+  --bg-color: #fff;
+  /* Light background color */
+  --accent-color: #000;
+  /* Dark text color for light mode */
+  --dark-bg-color: #fff;
+  /* Dark background color for specific elements in light mode */
+  --highlight-button-color: #555;
+  /* Button highlight color in light mode */
+  --hover-color: #5d00ff;
+  /* Hover color for links and buttons in light mode */
+  --grad-pic-color: #5d00ff22;
+  /* Gradient background color for images in light mode */
+}
+
+/* Dark mode colors */
 :root.dark-mode {
-  --bg-color: #111; /* Dark background color */
-  --accent-color: #fff; /* Light text color */
-  --dark-bg-color: #111; /* Dark background color for specific elements */
-  /* Add more dark mode styles here */
+  --bg-color: #222;
+  /* Dark background color (lighter) */
+  --accent-color: #ddd;
+  /* Light text color for dark mode */
+  --dark-bg-color: #222;
+  /* Dark background color for specific elements in dark mode */
+  --highlight-button-color: #444;
+  /* Button highlight color in dark mode */
+  --hover-color: #00a0f0;
+  /* Hover color for links and buttons in dark mode */
+  --grad-pic-color: #61dafb22;
+  /* Gradient background color for images in dark mode */
 }
 
 
@@ -2610,7 +2628,7 @@ h2.centered::after {
   display: block;
   margin: 0 auto;
   width: 20%;
-  border-bottom: 2px solid #000;
+  border-bottom: 2px solid var(--accent-color);
   /* Adjust the color and thickness as needed */
   margin-top: 10px;
   /* Adjust the spacing as needed */
@@ -2652,9 +2670,12 @@ h2.centered::after {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000; /* Adjust the z-index as needed */
-  background-color: var(--bg-color); /* Set the background color of the sticky navbar */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a box shadow for a subtle effect */
+  z-index: 1000;
+  /* Adjust the z-index as needed */
+  background-color: var(--bg-color);
+  /* Set the background color of the sticky navbar */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Add a box shadow for a subtle effect */
 }
 
 @keyframes slideDown {
@@ -6515,7 +6536,7 @@ h2.centered::after {
   display: block;
   margin: 0 auto;
   width: 20%;
-  border-bottom: 2px solid #000;
+  border-bottom: 2px solid var(--accent-color);
   /* Adjust the color and thickness as needed */
   margin-top: 10px;
   /* Adjust the spacing as needed */
@@ -6557,9 +6578,12 @@ h2.centered::after {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000; /* Adjust the z-index as needed */
-  background-color: var(--bg-color); /* Set the background color of the sticky navbar */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a box shadow for a subtle effect */
+  z-index: 1000;
+  /* Adjust the z-index as needed */
+  background-color: var(--bg-color);
+  /* Set the background color of the sticky navbar */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Add a box shadow for a subtle effect */
 }
 
 @keyframes slideDown {
