@@ -69,9 +69,51 @@ const darkModeToggle = document.getElementById('dark-mode-toggle');
 const root = document.documentElement;
 
 // Add a click event listener to the button
-darkModeToggle.addEventListener('click', function() {
+darkModeToggle.addEventListener('click', function () {
     // Toggle the 'dark-mode' class on the root element
     root.classList.toggle('dark-mode');
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const submitButton = document.getElementById('submit-button');
+    const form = document.getElementById('contact-form');
+    const successMessage = document.querySelector('.success-message');
+    const errorMessage = document.querySelector('.error-message');
+
+    submitButton.addEventListener('click', function (e) {
+        e.preventDefault(); // Prevent the link from navigating
+
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        // Validate the email (you can add more robust validation)
+        if (!validateEmail(email)) {
+            errorMessage.style.display = 'block';
+            successMessage.style.display = 'none';
+            return;
+        }
+
+        // Simulate a delay (2 seconds) for demonstration purposes
+        submitButton.textContent = 'Please wait...';
+        setTimeout(function () {
+            // Simulate success for the example
+            successMessage.style.display = 'block';
+            errorMessage.style.display = 'none';
+            form.style.display = 'none';
+
+            // Reset the form
+            form.reset();
+            submitButton.textContent = submitButton.getAttribute('data-wait');
+        }, 2000);
+    });
+
+    function validateEmail(email) {
+        // Basic email validation regex
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
+});
+
 
 type();

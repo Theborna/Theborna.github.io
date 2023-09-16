@@ -3042,6 +3042,10 @@ h2.centered::after {
   line-height: 16px;
 }
 
+.project-tag.group {
+  background-color: var(--hover-color);
+}
+
 .project-tag-list {
   display: -webkit-box;
   display: -webkit-flex;
@@ -6606,7 +6610,7 @@ h2.centered::after {
   color: var(--hover-color);
 }
 
-.collapsible.active+../media/image.jpg {
+.collapsible.active+.content {
   max-height: 500px;
   /* Adjust this value based on your content */
 }
