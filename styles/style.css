@@ -2964,7 +2964,7 @@ h2.centered::after {
 .column.bio-image {
   min-height: 720px;
   background-image: -webkit-gradient(linear, left top, left bottom, from(var(--grad-pic-color)), to(var(--grad-pic-color))), url("../image/image.jpg");
-  background-image: linear-gradient(180deg, var(--grad-pic-color), var(--grad-pic-color)), url("../image/image.jpg");
+  background-image: linear-gradient(180deg, var(--grad-pic-color), var(--grad-pic-color)), url("../image/bio.jpg");
   background-position: 0px 0px, 50% 0%;
   background-size: auto, cover;
   background-repeat: repeat, no-repeat;
@@ -3667,8 +3667,8 @@ h2.centered::after {
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
     border-top: 2px solid var(--accent-color);
-    background-image: -webkit-gradient(linear, left top, left bottom, from(null), to(null)), url("../image/image.jpg");
-    background-image: linear-gradient(180deg, null, null), url("../image/image.jpg");
+    background-image: -webkit-gradient(linear, left top, left bottom, from(null), to(null)), url("../image/bio.jpg");
+    background-image: linear-gradient(180deg, null, null), url("../image/bio.jpg");
     background-position: 0px 0px, 50% 0%;
   }
 
@@ -6875,7 +6875,7 @@ h2.centered::after {
 .column.bio-image {
   min-height: 720px;
   background-image: -webkit-gradient(linear, left top, left bottom, from(var(--grad-pic-color)), to(var(--grad-pic-color))), url("../image/image.jpg");
-  background-image: linear-gradient(180deg, var(--grad-pic-color), var(--grad-pic-color)), url("../image/image.jpg");
+  background-image: linear-gradient(180deg, var(--grad-pic-color), var(--grad-pic-color)), url("../image/bio.jpg");
   background-position: 0px 0px, 50% 0%;
   background-size: auto, cover;
   background-repeat: repeat, no-repeat;
@@ -7574,8 +7574,8 @@ h2.centered::after {
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
     border-top: 2px solid var(--accent-color);
-    background-image: -webkit-gradient(linear, left top, left bottom, from(null), to(null)), url("../image/image.jpg");
-    background-image: linear-gradient(180deg, null, null), url("../image/image.jpg");
+    background-image: -webkit-gradient(linear, left top, left bottom, from(null), to(null)), url("../image/bio.jpg");
+    background-image: linear-gradient(180deg, null, null), url("../image/bio.jpg");
     background-position: 0px 0px, 50% 0%;
   }
 
