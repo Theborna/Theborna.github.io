@@ -11,8 +11,8 @@ html {
 }
 
 :root {
-  --bio: url("https://assets.website-files.com/5f36e4734102a768f6308506/5f4fda86b0c9b452846dc16d_joe-bloggs-headshot.jpg");
   /* search for bio */
+  --bio: url("../image/bio.jpg");
   --profile: url("../image/profile.jpg");
 }
 
