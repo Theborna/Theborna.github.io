@@ -2950,6 +2950,18 @@ h2.centered::after {
   border-left-style: none
 }
 
+.social-icon svg {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.grade {
+  font-style: italic;
+  color: #666;
+}
+
 .column.logos {
   border-right-style: none;
   border-left-style: none;
